@@ -1,0 +1,1 @@
+data class CityVo(val name : String,val id : Int? = 0)
