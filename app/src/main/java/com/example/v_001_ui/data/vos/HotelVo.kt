@@ -1,4 +1,4 @@
-package com.example.v_001_ui.data
+package com.example.v_001_ui.data.vos
 
 import androidx.compose.runtime.MutableState
 import java.util.Random

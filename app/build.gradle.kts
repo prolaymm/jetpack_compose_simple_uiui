@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     packaging {
         resources {
@@ -48,8 +50,12 @@ android {
         }
     }
 }
+kapt {
+    correctErrorTypes= true
+}
 
 dependencies {
+    val fragment_version = "1.5.7"
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
@@ -67,5 +73,18 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("io.coil-kt:coil-compose:2.4.0")
+
+    ///retrofit
+
+    ///hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    ///retrofit
+    //Retrofit https://square.github.io/retrofit/ - latest vesion https://github.com/square/retrofit.
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    //Gson -> json data to java or kotlin format
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
 
 }

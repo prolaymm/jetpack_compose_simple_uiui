@@ -1,8 +1,8 @@
 package com.example.v_001_ui.utils
 
-import CityVo
+import com.example.v_001_ui.data.vos.CityVo
 import androidx.compose.runtime.mutableStateOf
-import com.example.v_001_ui.data.HotelVo
+import com.example.v_001_ui.data.vos.HotelVo
 
 object Constant {
 

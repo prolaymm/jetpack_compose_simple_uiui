@@ -35,7 +35,7 @@ import com.example.v_001_ui.composable.makeProfile
 import com.example.v_001_ui.composable.nearMeHotelCard
 import com.example.v_001_ui.composable.nearYouText
 import com.example.v_001_ui.composable.searchField
-import com.example.v_001_ui.data.HotelVo
+import com.example.v_001_ui.data.vos.HotelVo
 import com.example.v_001_ui.utils.Constant
 
 @Preview
